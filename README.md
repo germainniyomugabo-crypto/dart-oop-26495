@@ -46,16 +46,17 @@ Student card: 15% off
 
 ## Part 4: Bug table
 
-(To be completed after fixing the five bugs in bug_hunt.dart.)
+Bug	The line	Why it is wrong	Your fix
+1	String _brand; int _battery;	Non-nullable fields are not initialized.	Give them starting values.
+2	SmartPhone(String brand, int battery, String system)	Parent constructor is not called.	Add : super(brand, battery).
+3	@override before restart()	The parent class has no restart() method.	Remove @override.
+4	Missing battery setter	Battery cannot be changed using p.battery = 100.	Add a setter accepting 0 to 100.
+5	print(p.battery());	Getter is not a method.	Write print(p.battery);.
 
-| Bug | The line | Why it is wrong | Your fix |
-|---|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
-| Not a bug | | | None |
+Not a bug
+The line	Why is this line fine?
+Phone p = new Phone('Tecno', 50);	The new keyword is valid in Dart for creating an object.
+
 
 ## Part 5: Predict the output
 
