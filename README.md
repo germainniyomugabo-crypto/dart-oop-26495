@@ -11,8 +11,6 @@
 - Bus fare = 295 RWF
 - Student discount = 15%
 
-## Output of main.dart
-(To be added after completing Part 3 and running the program.)
 
 ## Part 1: Why no setter for balance?
 
@@ -26,6 +24,24 @@ The `~/` operator performs integer division. It returns a whole number without d
 - `237 * 17 ~/ 100` = 40
 
 The `/` operator returns a decimal result, while `~/` returns a whole number.
+
+## Part 3: Output of main.dart
+
+[Running] dart "c:\Users\USER\Desktop\dart-oop-26495\ main.dart"
+Error: name too short
+Owner: Niyomugabo Germain | Balance: 1950 RWF
+Owner: Niyomugabo Germain | Balance: 1950 RWF
+Error: top-up must be 500 to 50000 RWF
+Topped up 2000 RWF
+Paid 295 RWF
+Paid 295 RWF
+Owner: Niyomugabo Germain | Balance: 3360 RWF
+Student discount: 44 RWF
+Paid 251 RWF
+Owner: Niyomugabo Germain | Balance: 1699 RWF
+Student card: 15% off
+
+[Done] exited with code=0 in 1.759 seconds
 
 
 ## Part 4: Bug table

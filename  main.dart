@@ -58,13 +58,11 @@ class BusCard {
 class StudentCard extends BusCard {
   int _discount = 0;
 
-  // Constructor
   StudentCard(String owner, int balance, int discount)
       : super(owner, balance) {
     _discount = discount;
   }
 
-  // Override showInfo
   @override
   void showInfo() {
     super.showInfo();
@@ -78,4 +76,39 @@ class StudentCard extends BusCard {
     print('Student discount: $off RWF');
     super.pay(fare - off);
   }
+}
+
+// PART 3: main()
+void main() {
+  // My numbers: D = 95, L = 5
+  // Starting balance = 1950 RWF
+  // Bus fare = 295 RWF
+  // Discount = 15%
+
+  // Create a BusCard
+  BusCard card = BusCard('Niyomugabo Germain', 1950);
+
+  card.owner = 'Al';
+  card.showInfo();
+
+  // TODO 5
+  card.owner = 'Niyomugabo Germain';
+  card.showInfo();
+
+  // TODO 6
+  card.topUp(100);
+  card.topUp(2000);
+
+  // TODO 7
+  card.pay(295);
+  card.pay(295);
+  card.showInfo();
+
+  // TODO 8
+  StudentCard studentCard =
+      StudentCard('Niyomugabo Germain', 1950, 15);
+
+  // TODO 9
+  studentCard.pay(295);
+  studentCard.showInfo();
 }
