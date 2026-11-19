@@ -74,3 +74,12 @@ Phone p = new Phone('Tecno', 50);	The new keyword is valid in Dart for creating 
 - `b.add()` adds 2 items because `BigBag` calls `super.add()` twice.
 - Calling `b.add()` twice gives 4 items.
 - `b.items = b.items + 1` increases the value to 5.
+
+Real output:
+
+1
+5
+
+Was I right?
+
+Yes. My prediction was correct because the actual output matches my prediction.
