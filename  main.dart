@@ -28,7 +28,7 @@ class BusCard {
     }
   }
 
-  // Method to show information
+  // Show card information
   void showInfo() {
     print('Owner: $_owner | Balance: $_balance RWF');
   }
@@ -51,5 +51,31 @@ class BusCard {
       _balance = _balance - fare;
       print('Paid $fare RWF');
     }
+  }
+}
+
+// PART 2: StudentCard class
+class StudentCard extends BusCard {
+  int _discount = 0;
+
+  // Constructor
+  StudentCard(String owner, int balance, int discount)
+      : super(owner, balance) {
+    _discount = discount;
+  }
+
+  // Override showInfo
+  @override
+  void showInfo() {
+    super.showInfo();
+    print('Student card: $_discount% off');
+  }
+
+  // TODO 4: Override pay method
+  @override
+  void pay(int fare) {
+    int off = fare * _discount ~/ 100;
+    print('Student discount: $off RWF');
+    super.pay(fare - off);
   }
 }

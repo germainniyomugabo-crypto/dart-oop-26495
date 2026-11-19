@@ -20,10 +20,13 @@ There is no setter for balance because users should not change the balance direc
 
 ## Part 2: What does ~/ do?
 
-The `~/` operator performs integer division. It returns a whole number without the decimal part.
+The `~/` operator performs integer division. It returns a whole number without decimal places.
 
 - `237 * 17 / 100` = 40.29
 - `237 * 17 ~/ 100` = 40
+
+The `/` operator returns a decimal result, while `~/` returns a whole number.
+
 
 ## Part 4: Bug table
 
