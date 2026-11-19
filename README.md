@@ -9,7 +9,7 @@
 - L = 5
 - Starting balance = 1950 RWF
 - Bus fare = 295 RWF
-- Student discount = 15%
+- Student discount = 15% 
 
 ## Output of main.dart
 
