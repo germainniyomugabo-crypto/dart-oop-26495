@@ -11,21 +11,7 @@
 - Bus fare = 295 RWF
 - Student discount = 15%
 
-
-## Part 1: Why no setter for balance?
-
-There is no setter for balance because users should not change the balance directly. They must use the `topUp()` method to add money and the `pay()` method to deduct money. This helps protect the bus card balance.
-
-## Part 2: What does ~/ do?
-
-The `~/` operator performs integer division. It returns a whole number without decimal places.
-
-- `237 * 17 / 100` = 40.29
-- `237 * 17 ~/ 100` = 40
-
-The `/` operator returns a decimal result, while `~/` returns a whole number.
-
-## Part 3: Output of main.dart
+## Output of main.dart
 
 [Running] dart "c:\Users\USER\Desktop\dart-oop-26495\ main.dart"
 Error: name too short
@@ -42,6 +28,20 @@ Owner: Niyomugabo Germain | Balance: 1699 RWF
 Student card: 15% off
 
 [Done] exited with code=0 in 1.759 seconds
+
+
+## Part 1: Why no setter for balance?
+
+There is no setter for balance because users should not change the balance directly. They must use the `topUp()` method to add money and the `pay()` method to deduct money. This helps protect the bus card balance.
+
+## Part 2: What does ~/ do?
+
+The `~/` operator performs integer division. It returns a whole number without decimal places.
+
+- `237 * 17 / 100` = 40.29
+- `237 * 17 ~/ 100` = 40
+
+The `/` operator returns a decimal result, while `~/` returns a whole number.
 
 
 ## Part 4: Bug table
