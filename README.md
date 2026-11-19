@@ -14,6 +14,7 @@
 ## Output of main.dart
 
 [Running] dart "c:\Users\USER\Desktop\dart-oop-26495\ main.dart"
+
 Error: name too short
 Owner: Niyomugabo Germain | Balance: 1950 RWF
 Owner: Niyomugabo Germain | Balance: 1950 RWF
