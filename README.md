@@ -62,12 +62,14 @@ Phone p = new Phone('Tecno', 50);	The new keyword is valid in Dart for creating 
 
 **My prediction:**
 
-(To be completed before running the code.)
+```text
+1
+5
+```
 
-**Real output:**
+**Why?**
 
-(To be added after running the code.)
-
-**Was I right?**
-
-(To be completed after comparing the prediction with the real output.)
+- `a.add()` increases the items to 1.
+- `a.items = -5` is rejected because the setter only accepts values greater than or equal to 0. Therefore, the value remains 1.
+- Each time `b.add()` runs, it adds 2 items because `BigBag` calls `super.add()` twice.
+- After two calls, `b` has 4 items. Adding 1 more makes 5.
