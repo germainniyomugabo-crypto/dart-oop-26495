@@ -69,7 +69,8 @@ Phone p = new Phone('Tecno', 50);	The new keyword is valid in Dart for creating 
 
 **Why?**
 
-- `a.add()` increases the items to 1.
-- `a.items = -5` is rejected because the setter only accepts values greater than or equal to 0. Therefore, the value remains 1.
-- Each time `b.add()` runs, it adds 2 items because `BigBag` calls `super.add()` twice.
-- After two calls, `b` has 4 items. Adding 1 more makes 5.
+- `a.add()` increases `_items` from 0 to 1.
+- `a.items = -5` is rejected because the setter accepts only values greater than or equal to 0. The value remains 1.
+- `b.add()` adds 2 items because `BigBag` calls `super.add()` twice.
+- Calling `b.add()` twice gives 4 items.
+- `b.items = b.items + 1` increases the value to 5.
