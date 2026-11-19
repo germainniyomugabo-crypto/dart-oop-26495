@@ -1,4 +1,3 @@
-
 class Phone {
   String _brand = '';
   int _battery = 0;
