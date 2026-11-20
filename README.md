@@ -47,16 +47,14 @@ The `/` operator returns a decimal result, while `~/` returns a whole number.
 
 ## Part 4: Bug table
 
-The line	Why it is wrong	Your fix
-1	String _brand; int _battery;	Non-nullable fields are not initialized.	Give them starting values.
-2	SmartPhone(String brand, int battery, String system)	Parent constructor is not called.	Add : super(brand, battery).
-3	@override before restart()	The parent class has no restart() method.	Remove @override.
-4	Missing battery setter	Battery cannot be changed using p.battery = 100.	Add a setter accepting 0 to 100.
-5	print(p.battery());	Getter is not a method.	Write print(p.battery);.
-
-Not a bug
-The line	Why is this line fine?
-Phone p = new Phone('Tecno', 50);	The new keyword is valid in Dart for creating an object.
+Bug	The line	Why it is wrong (your words)	Your fix
+1	String _brand; and int _battery;	The fields have no starting value, and Dart does not allow a non-nullable field to start empty.	String _brand = ''; and int _battery = 0;
+2	SmartPhone(String brand, int battery, String system) {	The child constructor does not build the parent Phone first, and Phone needs brand and battery.	Add : super(brand, battery) after the parameters.
+3	@override above void restart()	@override only works if the parent has that method. Phone has no restart.	Remove @override.
+4	p.battery = 100;	There is a getter for battery but no setter, so it cannot be assigned.	Add set battery(int value) that accepts only 0 to 100.
+5	print(p.battery());	battery is a getter, so it is used like a field. Writing () treats it like a method.	print(p.battery);
+Not a bug	Phone p = new Phone('Tecno', 50);	The new keyword is old style but still allowed in Dart. It works the same as Phone('Tecno', 50).	(none)
+The fixed program prints 100.
 
 
 ## Part 5: Predict the output
