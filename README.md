@@ -47,7 +47,7 @@ The `/` operator returns a decimal result, while `~/` returns a whole number.
 
 ## Part 4: Bug table
 
-Bug	The line	Why it is wrong	Your fix
+The line	Why it is wrong	Your fix
 1	String _brand; int _battery;	Non-nullable fields are not initialized.	Give them starting values.
 2	SmartPhone(String brand, int battery, String system)	Parent constructor is not called.	Add : super(brand, battery).
 3	@override before restart()	The parent class has no restart() method.	Remove @override.
