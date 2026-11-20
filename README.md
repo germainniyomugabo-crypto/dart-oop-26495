@@ -47,16 +47,19 @@ The `/` operator returns a decimal result, while `~/` returns a whole number.
 
 ## Part 4: Bug table
 
-The line	Why it is wrong	Your fix
-1	String _brand; int _battery;	Non-nullable fields are not initialized.	Give them starting values.
-2	SmartPhone(String brand, int battery, String system)	Parent constructor is not called.	Add : super(brand, battery).
-3	@override before restart()	The parent class has no restart() method.	Remove @override.
-4	Missing battery setter	Battery cannot be changed using p.battery = 100.	Add a setter accepting 0 to 100.
-5	print(p.battery());	Getter is not a method.	Write print(p.battery);.
+| No. | Bug | Correction |
+|---|---|---|
+| 1 | `_brand` and `_battery` were not initialized. | Initialize them with `''` and `0`. |
+| 2 | The `SmartPhone` constructor did not call the parent constructor. | Add `: super(brand, battery)`. |
+| 3 | `@override` was used for `restart()`, but the parent class has no such method. | Remove `@override`. |
+| 4 | The `Phone` class had no battery setter. | Add a setter that accepts values from 0 to 100. |
+| 5 | `print(p.battery())` called the getter like a method. | Change it to `print(p.battery);`. |
 
-Not a bug
-The line	Why is this line fine?
-Phone p = new Phone('Tecno', 50);	The new keyword is valid in Dart for creating an object.
+**Line that looks wrong but is correct:**
+
+`Phone p = new Phone('Tecno', 50);`
+
+The `new` keyword is valid in Dart.
 
 
 ## Part 5: Predict the output
